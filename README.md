@@ -14,6 +14,7 @@
               "name": "JOWEL"
             }
   }
+// This is basic structure for API response, data can be a list or dictionary.   
 ```
 ##Code Example
 
@@ -37,7 +38,7 @@ Next, create APIResponse class . For that every api response class need to exten
         @override
           SimpleModel convertDataToModel(data) {
             // create model instance from data and return model instance
-            
+            return SimpleModel.fromJson(data); // in api response , data is Dictionary. It can be a list also 
           }
       } 
 ```  
