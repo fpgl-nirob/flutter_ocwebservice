@@ -3,7 +3,11 @@
  Flutter API calling package 
 ## Getting Started
 # Add Package into your project
+```yaml
 
+dependencies:
+  ocwebservice: ^0.0.1
+```
 ## Basic api response structure 
 ```json
 //Suppose a URL(http://www.mysimple.com/api/sayhello) return bellow response.
