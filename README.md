@@ -7,6 +7,7 @@
 
 ##Code Example
  #Create a Model class first
+ ```dart
         class SimpleModel {
             String name;
             String email;
@@ -18,6 +19,8 @@
                 return SimpleModel(name: dic['name', email: dic['email']]);
             }
         }
+```
+        
 
 
 
