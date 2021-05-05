@@ -62,6 +62,14 @@ Next, create APIResponse class . For that every api response class need to exten
           }
       } 
 ```  
-
+Now let's create an API EndPoint for (http://www.mysimple.com/api/sayhello) url. Here,
+'http://www.mysimple.com/api/' this is base api url 
+'sayhello' is path
+A standard structure of EndPoint be path, requestType, body params if post request, headers
+Let's see How can we make a SayHelloEndPoint by extends OCEndPoint class 
+```dart
+ OCEndPoint sayHelloEndPoint = OCEndPoint(path: "sayhello",requestType: OCRequestType.POST,needAuth: false);
+//It has few more parameters, Please check OCEndPoint class
+``` 
 
 
