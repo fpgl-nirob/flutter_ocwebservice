@@ -66,7 +66,7 @@ Now let's create an API EndPoint for (http://www.mysimple.com/api/sayhello) url.
 'http://www.mysimple.com/api/' this is base api url 
 'sayhello' is path
 A standard structure of EndPoint be path, requestType, body params if post request, headers
-Let's see How can we make a SayHelloEndPoint by extends OCEndPoint class 
+Let's see How can we make a OCEndPoint instance for sayhello api.
 ```dart
  OCEndPoint sayHelloEndPoint = OCEndPoint(path: "sayhello",requestType: OCRequestType.POST,needAuth: false);
 //It has few more parameters, Please check OCEndPoint class
