@@ -6,6 +6,7 @@
 
 ##Basic api response structure 
 ```json
+//Suppose a URL(http://www.mysimple.com/api/sayhello) return bellow response.
   {
     "success": true,
     "message": "request successful",
@@ -34,11 +35,30 @@ First create a model class
 ```
 Next, create APIResponse class . For that every api response class need to extends OCAPIResponse<M> class where M is Model class 
 ```dart
+      //when data is a List of Dictionary/map
+      class SimpleAPIResponse extends OCAPIResponse<List<SimpleModel>> {
+        @override
+          List<SimpleModel> convertDataToModel(data) {
+           // here data is now a list of map
+            List<SimpleModel> simpleModelList = List<SimpleModel>();
+            List<dynamic> dataList = data;
+           // so, let's cast it & loop through the map 
+           // convert the map into SimpleModel object & Add into list
+            dataList.forEach((element){
+              simpleModelList.add(SimpleModel.fromJson(data));
+            });
+           
+            return simpleModelList; // 
+          }
+      }
+
+      //when data is a Dictionary/map
       class SimpleAPIResponse extends OCAPIResponse<SimpleModel> {
         @override
           SimpleModel convertDataToModel(data) {
             // create model instance from data and return model instance
-            return SimpleModel.fromJson(data); // in api response , data is Dictionary. It can be a list also 
+            return SimpleModel.fromJson(data); // in api response , data is Dictionary. 
+            // It can be a list also 
           }
       } 
 ```  
