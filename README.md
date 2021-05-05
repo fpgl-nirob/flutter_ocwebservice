@@ -2,9 +2,9 @@
 
  Flutter API calling package 
 ## Getting Started
-#Add Package into your project
+# Add Package into your project
 
-##Basic api response structure 
+## Basic api response structure 
 ```json
 //Suppose a URL(http://www.mysimple.com/api/sayhello) return bellow response.
   {
@@ -17,7 +17,7 @@
   }
 // This is basic structure for API response, data can be a list or dictionary.   
 ```
-##Code Example
+## Code Example
 
 First create a model class 
  ```dart
