@@ -71,11 +71,3 @@ class OCNetwork {
     }
   }
 }
-
-
-void test() {
-  List<dynamic> kk = List();
-  kk.forEach((element) {
-
-  });
-}
