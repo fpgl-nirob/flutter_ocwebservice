@@ -72,4 +72,22 @@ Let's see How can we make a OCEndPoint instance for sayhello api.
 //It has few more parameters, Please check OCEndPoint class
 ``` 
 
+Final step is to make a OCWebService instance by passing endpoint & api response instance 
+Call OCwebService fetch() method for extecute the request . fetch is Future class so, you can use it 
+directly in FutureWidget . You will get your mode data by ocwebservice.response.model 
+this model is actually the model you have passed in repose class 
+
+```dart
+void test() async {
+  
+  OCWebService<OCEndPoint, SimpleAPIResponse> sayHelloWebService = makeOCWebService<SimpleAPIResponse>(sayHelloEndPoint, SimpleAPIResponse());
+  //Call fetch method for start network request
+  await sayHelloWebService.fetch();
+  //Your model class instance you will get 
+  sayHelloWebService.response.model.email; // SimpleModel
+  sayHelloWebService.response; //message, success you will get from here 
+  
+}
+```
+
 

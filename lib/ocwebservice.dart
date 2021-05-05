@@ -20,7 +20,15 @@ class OCWebService<E extends OCEndPoint,R extends OCAPIResponse> {
   }
 }
 
+class SimepeModel {}
 
+class SayHelloAPIResponse extends OCAPIResponse<SimepeModel> {
+  @override
+  SimepeModel convertDataToModel(data) {
+
+  }
+
+}
 
 OCWebService makeOCWebService<M extends OCAPIResponse>(OCEndPoint endPoint, M response) {
   return OCWebService<OCEndPoint, M>(network:
@@ -29,4 +37,3 @@ OCWebService makeOCWebService<M extends OCAPIResponse>(OCEndPoint endPoint, M re
     response: response
   );
 }
-

@@ -34,7 +34,3 @@ class OCEndPoint{
   }
 
 }
-
-void test() {
-  OCEndPoint sayHelloEndPoint = OCEndPoint(path: "sayhello",requestType: OCRequestType.POST,needAuth: false);
-}
