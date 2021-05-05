@@ -4,9 +4,20 @@
 ## Getting Started
 #Add Package into your project
 
-
+##Basic api response structure 
+```json
+  {
+    "success": true,
+    "message": "request successful",
+    "data": {
+              "email": "me@webapi.com",
+              "name": "JOWEL"
+            }
+  }
+```
 ##Code Example
- #Create a Model class first
+
+First create a model class 
  ```dart
         class SimpleModel {
             String name;
@@ -20,7 +31,16 @@
             }
         }
 ```
-        
+Next, create APIResponse class . For that every api response class need to extends OCAPIResponse<M> class where M is Model class 
+```dart
+      class SimpleAPIResponse extends OCAPIResponse<SimpleModel> {
+        @override
+          SimpleModel convertDataToModel(data) {
+            // create model instance from data and return model instance
+            
+          }
+      } 
+```  
 
 
 
