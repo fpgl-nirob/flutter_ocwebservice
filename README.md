@@ -6,7 +6,7 @@
 ```yaml
 
 dependencies:
-  ocwebservice: ^0.0.1
+  ocwebservice: ^1.0.0
 ```
 ## Basic api response structure 
 ```json
