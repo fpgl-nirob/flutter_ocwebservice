@@ -14,6 +14,14 @@ class OCEndPoint{
   Map<String,String> bodyParams;
   Map<String,String> headers;
   OCRequestType requestType;
+  bool needAuth = true;
+
+  OCEndPoint({this.path,
+    this.bodyParams,
+    this.headers,
+    this.requestType,
+    this.needAuth});
+
 
   // Header is method cause if need refresh token call
   Future<Map<String, String>> getHeaders() async {
